@@ -131,7 +131,7 @@ Please read the documention to understand the mapping between database users und
 Create a new user in Guacamole and set its username to the username of an existing AD user, which is located in your AD-Tree below the OU (Organizational Unit), which you have configured in `LDAP_USER_BASE_DN` environment variable.
 
 If you haven't changed `LDAP_USERNAME_ATTRIBUTE` then the mapped username of your AD user is the `userPrincipalName` AD-Attribute.
-Your can set any password. It does not need to match your AD user's password.
+Your can set any password. It **must not** match your AD user's password.
 Make sure you check all permissions and hit `Save` at the bottom of the page.
 
 ![Guacamole home start connection](images/09-guac-ad-user.png) 
