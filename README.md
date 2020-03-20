@@ -27,7 +27,9 @@ Ideally you have a vanilla or an existing Ubuntu server on your corporate networ
 Your internet router should forward all network traffic, incomming from the internet on port `80` and `443` to the internal IP address and port 80 and 443 of your Ubuntu server. Port 80 is used by Letsencrypt for httpChallenge for automatic SSL certificate request an renewals. Port 443 is actually used by the secured HTTPS traffic.
 You should register a public DNS hostname - for example `desktops.yourcompany.com` - which points to the external IP address your internet router. 
 If your external IP address of your internet router is not a static one, but changes sometimes, then dynamic DNS updates is your friend, which is often an already built-in feature of your internet router and works usually very reliable.  
-NOTE: You can easily set your DynDNS-Name as CNAME to `desktops.yourcompany.com` in your public DNS. 
+NOTE: You can easily set your DynDNS-Name as CNAME to `desktops.yourcompany.com` in your public DNS.  
+
+**Pro-Tip**: Maybe you have spotted the [Vagrantfile](Vagrantfile). This means, for testing purpose you can use `vagrant up` to spin up an Ubuntu Linux immediately, if you are a little bit familiar with [Vagrant](https://www.vagrantup.com/downloads.html) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and have already installed it somewhere. If you do so then you can already skip `Step 1`, because Vagrant has done it already for you. 
 
 
 ### Step 1:
@@ -123,7 +125,7 @@ General Help on [How to configure connections in Guacamole](https://guacamole.ap
 ## Using Active Directory Authentication and enable 2-FA 
 
 Make sure you have entered correct mandatory values regarding LDAP authentication into the [.env](.env) file in **Step 2** during initial configuration.   
-NOTE: We don't use the AD Schema preparation documented at https://guacamole.apache.org/doc/gug/ldap-auth.html, because we don't like to edit changes in our AD Schema. 
+NOTE: We don't use the AD Schema preparation, documented at https://guacamole.apache.org/doc/gug/ldap-auth.html, because we don't like to do changes in our Active Directory Schema. 
 Please read the documention to understand the mapping between database users und AD users.
 
 ### Step 1: Create an initial admin user in Guacamole which maps to an AD user 
