@@ -35,7 +35,7 @@ services:
       - TRAEFIK_LOG_LEVEL=INFO
       - TRAEFIK_PROVIDERS_DOCKER=true
       - TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT=false
-      - TRAEFIK_PROVIDERS_DOCKER_NETWORK=traefik_proxy_net
+      - TRAEFIK_PROVIDERS_DOCKER_NETWORK=${COMPOSE_PROJECT_NAME:-workfromhome-with-docker}_proxy_net
       - TRAEFIK_PROVIDERS_FILE_FILENAME=/etc/traefik/traefik.providers.file.toml
       - TRAEFIK_PROVIDERS_FILE_WATCH=true
 
