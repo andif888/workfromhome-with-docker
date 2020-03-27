@@ -1,7 +1,7 @@
 #!/bin/bash
 docker-compose rm --stop --force
 
-docker pull traefik:v2.1
+docker pull traefik:v2.2
 docker pull guacamole/guacd
 docker pull guacamole/guacamole
 
