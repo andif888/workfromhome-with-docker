@@ -1,13 +1,13 @@
 #!/bin/bash
 docker-compose rm --stop --force
 
-docker pull traefik:v2.3
+docker pull traefik:v2.4
 docker pull guacamole/guacd
 docker pull guacamole/guacamole
 
 
 # Download and install 2-FA TOTP extension for Guacamole
-GUAC_VER=1.2.0
+GUAC_VER=1.3.0
 EXTENSION_DIR=./guac_home/extensions
 
 mkdir -p $EXTENSION_DIR
