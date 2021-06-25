@@ -30,7 +30,7 @@ apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io 
 
 # Download docker-compose
-curl -SLo /usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-Linux-x86_64"
+curl -SLo /usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64"
 chown root:root /usr/local/bin/docker-compose
 chmod 0755 /usr/local/bin/docker-compose
 
